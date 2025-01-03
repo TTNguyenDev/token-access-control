@@ -17,7 +17,7 @@ async def start_command(message: Message, manager: Manager) -> None:
 
     await message.answer(
         f"Hello {sender_name}, please go to this link to verify: "
-        "https://ton-app.lfg.suipass.xyz\n"
+        "https://ton-apps.demo.lfg.inc\n"
         "After going to this link, please connect this telegram account and "
         "your ETH wallet, then click `Verify` button, and sign the message.\n"
         "After all, please get back to this bot, and run "
