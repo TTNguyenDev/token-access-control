@@ -3,6 +3,7 @@ from aiogram_newsletter.handlers import AiogramNewsletterHandlers
 from aiogram_tonconnect.handlers import AiogramTonConnectHandlers
 
 from . import admin
+from . import public
 from . import chats
 from . import private
 from . import errors
@@ -16,6 +17,7 @@ def bot_routers_include(dp: Dispatcher) -> None:
         *[
             admin.command.router,
             private.command.router,
+            public.verify.router,
         ],
     )
 
@@ -25,13 +27,10 @@ def bot_routers_include(dp: Dispatcher) -> None:
     dp.include_routers(
         *[
             errors.router,
-
             admin.callback_query.router,
             private.callback_query.router,
-
             admin.message.router,
             private.message.router,
-
             private.my_chat_member.router,
             chats.my_chat_member.router,
         ]
